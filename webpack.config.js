@@ -26,7 +26,7 @@ module.exports = {
           //   loader: "css-loader"
           }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract(cssLoaders)
+            loader: cssLoaders//ExtractTextPlugin.extract(cssLoaders)
           }
         ]
     },
