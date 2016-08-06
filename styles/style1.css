@@ -1,3 +1,38 @@
-.button1 {
+.navigation {
+  font-size: 40px;
+}
+
+.navigation__my-button {
+  padding: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+  .navigation__my-button {
+    padding: 30px;
+  }
+}
+
+.navigation__my-button--red {
   color: red;
+}
+
+.navigation__my-button--blue {
+  color: blue;
+}
+
+.navigation__my-button--green {
+  color: blue;
+}
+
+.navigation__my-button--other-yellow-color {
+  color: yellow;
+}
+
+
+.navigation__my-button--blue {
+  color: lightblue;
+}
+
+.header {
+  font-size: 40px;
 }

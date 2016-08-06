@@ -1,10 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var cssLoaders = [
-  __dirname + '/bem-module-loader.js',
-  'css-loader?module'
-].join('!')
-
 module.exports = {
     entry: './index.js',
     output: {
@@ -21,12 +16,9 @@ module.exports = {
               plugins: ['transform-object-assign'],
               presets: ['react', 'es2015']
             }
-          // }, {
-          //   test: /\.css$/,
-          //   loader: "css-loader"
           }, {
             test: /\.css$/,
-            loader: cssLoaders//ExtractTextPlugin.extract(cssLoaders)
+            loader: __dirname + '/bem-module-loader.js'
           }
         ]
     },
