@@ -78,14 +78,4 @@ function bemify(blocks) {
   return result
 }
 
-// var navigation = bem.navigation
-//
-// console.log('' + navigation())
-// console.log('' + navigation().myButton())
-// console.log('' + navigation().myButton().red())
-// console.log('' + navigation().myButton().red().blue().otherYellowColor())
-// console.log('' + navigation().label())
-// console.log('' + navigation().label().red())
-// console.log('' + navigation().label().red().blue().yellow())
-
 module.exports = bemify
