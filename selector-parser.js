@@ -5,7 +5,7 @@ var plugin = postcss.plugin('selector-parser', function selectorParser(options) 
   return function (css) {
     css.selectors = []
     css.walkRules(function (rule) {
-      css.selectors.push(rule.selector)
+      css.selectors.push.apply(css.selectors, rule.selector.split(/\s|>/))
     })
   }
 });
@@ -76,7 +76,9 @@ module.exports = function (style) {
     .then(function (result) {
       var bem = []
       result.root.selectors.forEach(function (selector) {
-        updateBemObject(bem, selector)
+        if (selector.length) {
+          updateBemObject(bem, selector)
+        }
       })
 
       return bem
