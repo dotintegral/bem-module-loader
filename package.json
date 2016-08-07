@@ -1,12 +1,13 @@
 {
   "name": "bem-module-loader",
   "version": "0.1.0",
-  "description": "",
-  "main": "start.js",
+  "description": "Webpack loader for loading BEM based CSS in style of CSS Modules",
+  "main": "bem-module-loader.js",
   "author": "Artur Siery",
+  "url": "https://github.com/dotintegral/bem-module-loader",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AccidentallyMoose/Dasz/issues"
+    "url": "https://github.com/dotintegral/bem-module-loader/issues"
   },
   "dependencies": {
     "cssnano": "^3.7.3",
