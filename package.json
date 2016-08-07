@@ -9,15 +9,10 @@
     "url": "https://github.com/AccidentallyMoose/Dasz/issues"
   },
   "dependencies": {
-    "css-loader": "^0.23.1",
     "cssnano": "^3.7.3",
-    "extract-text-webpack-plugin": "^1.0.1",
     "loader-utils": "^0.2.15",
-    "node-sass": "^3.4.2",
     "postcss": "^5.1.1",
     "promisify-node": "^0.4.0",
-    "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
