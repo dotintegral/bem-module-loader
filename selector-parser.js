@@ -1,7 +1,7 @@
 var fs = require('fs')
 var postcss = require('postcss')
 
-var plugin = postcss.plugin('myplugin', function myplugin(options) {
+var plugin = postcss.plugin('selector-parser', function selectorParser(options) {
   return function (css) {
     css.selectors = []
     css.walkRules(function (rule) {

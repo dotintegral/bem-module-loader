@@ -8,8 +8,12 @@
   "bugs": {
     "url": "https://github.com/AccidentallyMoose/Dasz/issues"
   },
+  "scripts": {
+    "start": "webpack"
+  },
   "dependencies": {
     "css-loader": "^0.23.1",
+    "cssnano": "^3.7.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "loader-utils": "^0.2.15",
     "node-sass": "^3.4.2",

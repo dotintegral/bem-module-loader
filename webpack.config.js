@@ -20,6 +20,7 @@ module.exports = {
         query: {
           path: __dirname + '/build/',
           filename: 'bundle.css',
+          minify: true
         }
       }]
   }
