@@ -16,7 +16,7 @@ module.exports = {
         }
       }, {
         test: /\.css$/,
-        loader: __dirname + '/bem-module-loader.js',
+        loader: __dirname + '/../bem-module-loader.js',
         query: {
           path: __dirname + '/build/',
           filename: 'bundle.css',
