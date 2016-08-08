@@ -12,7 +12,12 @@ var plugin = postcss.plugin('selector-parser', function selectorParser(options) 
 
 var processor = postcss([plugin])
 
-function getBlockObject(bem, block) {
+function getSimpleSelector(selector) {
+  return selector.split(':')[0]
+}
+
+function getBlockObject(bem, inputBlock) {
+  var block = getSimpleSelector(inputBlock)
   var blockObject = bem.filter(function (definition) {
     return definition.block === block
   })[0]
@@ -29,7 +34,8 @@ function getBlockObject(bem, block) {
   return blockObject
 }
 
-function getElementObject(blockObject, element) {
+function getElementObject(blockObject, inputElement) {
+  var element = getSimpleSelector(inputElement)
   var elementObject = blockObject.elements.filter(function (definition) {
     return definition.element = element
   })[0]
@@ -46,7 +52,9 @@ function getElementObject(blockObject, element) {
   return elementObject
 }
 
-function updateModifiers(elementObject, modifier) {
+function updateModifiers(elementObject, inputModifier) {
+  var modifier = getSimpleSelector(inputModifier)
+  
   if (elementObject.modifiers.indexOf(modifier) === -1) {
     elementObject.modifiers.push(modifier)
   }
