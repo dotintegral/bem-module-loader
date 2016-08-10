@@ -34,7 +34,7 @@ function createModifier(prefix, modifier, string, modifiers) {
 function createElement(block, element, modifiers) {
   return function () {
     var toString = function () {
-      return '.' + block + '__' + element
+      return block + '__' + element
     }
 
     var result = {}
@@ -53,7 +53,7 @@ function createElement(block, element, modifiers) {
 function createBlock(block, elements) {
   return function () {
     var toString = function () {
-      return '.' + block
+      return block
     }
 
     var result = {}

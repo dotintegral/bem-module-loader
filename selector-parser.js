@@ -37,7 +37,7 @@ function getBlockObject(bem, inputBlock) {
 function getElementObject(blockObject, inputElement) {
   var element = getSimpleSelector(inputElement)
   var elementObject = blockObject.elements.filter(function (definition) {
-    return definition.element = element
+    return definition.element === element
   })[0]
 
   if (elementObject === undefined) {
@@ -54,7 +54,7 @@ function getElementObject(blockObject, inputElement) {
 
 function updateModifiers(elementObject, inputModifier) {
   var modifier = getSimpleSelector(inputModifier)
-  
+
   if (elementObject.modifiers.indexOf(modifier) === -1) {
     elementObject.modifiers.push(modifier)
   }
