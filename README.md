@@ -30,7 +30,7 @@ import { myBlock } from 'styles.css'
 let myClass = myBlock().myElement().modifier()
 
 console.log(`<div class="${myClass}">My div content</div>`)
-// will print out <div class=".my-block__my-element .my-block__my-element--modifier">My div content</div>
+// will print out <div class="my-block__my-element my-block__my-element--modifier">My div content</div>
 ```
 
 ## Options
@@ -76,9 +76,9 @@ if (isClickable()) {
 
 console.log(buttonStyle)
 // Depending on the combination of the conditions, buttonStyle content might be:
-// ".navigation__button" (no conditions met)
-// ".navigation__button .navigation__button--big" (isBig condition met)
-// ".navigation__button .navigation__button--red .navigation__button--big .navigation__button--clickable" (all conditions met)
+// "navigation__button" (no conditions met)
+// "navigation__button navigation__button--big" (isBig condition met)
+// "navigation__button navigation__button--red navigation__button--big navigation__button--clickable" (all conditions met)
 ```
 ### Reliable
 Because `bem-module-loader` generates JS objects in compilation phase, it will contain only existing methods!
